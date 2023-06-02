@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+//### Primary
+
+$Purple: hsl(259, 100%, 65%);
+$Lightred: hsl(0, 100%, 67%);
+
+//### Neutral
+
+$White: hsl(0, 0%, 100%);
+$Offwhite: hsl(0, 0%, 94%);
+$Lightgrey: hsl(0, 0%, 86%);
+$Smokeygrey: hsl(0, 1%, 44%);
+$Offblack: hsl(0, 0%, 8%);
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: $Offwhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    .content{
+        padding: 50px 30px;
+        width: 100%;
+        background-color: white;
+        border-radius: 20px 20px 100px 20px;
+        .inputs{
+            display: flex;
+            gap: 20px;
+            .input{
+                width: 100%;
+                gap: 10px;
+                display: flex;
+                flex-direction: column;
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+                input[type=number] {
+                    -moz-appearance: textfield;
+                }
+                label{
+                    cursor: pointer;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    color: $Smokeygrey;
+                }
+                input{
+                    width: 100%;
+                    padding: 20px 20px;
+                    border-radius: 10px;
+                    appearance: none;
+                    outline: none;
+                    border: 1px solid $Lightgrey;
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+                .error{
+                    color: $Lightred;
+                    font-size: 10px;
+                    div{
+                        display: none;
+                    }
+                }
+            }
+            .input.empty{
+                label{
+                    color: $Lightred;
+                }
+                input{
+                    border: 1px solid red;
+                }
+                .error .error-invalid{
+                    display: none;
+                }
+                .error .error-empty{
+                    display: block;
+                }
+            }
+            .input.invalid{
+                label{
+                    color: $Lightred;
+                }
+                input{
+                    border: 1px solid red;
+                }
+                .error .error-empty{
+                    display: none;
+                }
+                .error .error-invalid{
+                    display: block;
+                }
+            }
+        }
+        .bar-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding-block: 60px;
+            .bar{
+                width: 100%;
+                background-color: $Smokeygrey;
+            }
+            .bar-circle{
+                position: absolute;
+                background-color: $Purple;
+                width: 70px;
+                height: 70px;
+                display: grid;
+                place-items: center;
+                border-radius: 100px;
+                cursor: pointer;
+                img{
+                    width: 40px;
+                }
+            }
+        }
+        .result{
+            font-size: 60px;
+            font-weight: 800;
+            font-style: italic;
+            span{
+                color: $Purple;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .container{
+        .content{
+            width: 60%;
+            padding: 30px;
+            padding-top: 30px;
+            .inputs{
+                width: 80%;
+                .input{
+                    input:hover{
+                        cursor: pointer;
+                        border-color: $Purple;
+                    }
+                }
+            }
+            .bar-container{
+                padding-block: 30px;
+                justify-content: flex-end;
+                .bar-circle{
+                    transition: background-color 300ms ease-in-out;
+                }
+                .bar-circle:hover{
+                    background-color: $Offblack;
+                }
+            }
+            .result{
+                font-size: 70px;
+            }
+        }
+    }
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

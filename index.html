@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Age calculator app</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="inputs">
+        <div class="input" id="day">
+          <label>Day</label>
+          <input data-name="day" placeholder="DD" type="number" min="0" max="31">
+          <div class="error">
+            <div class="error-invalid">Must be a valid day</div>
+            <div class="error-empty">This field is required</div>
+          </div>
+        </div>
+        <div class="input" id="month">
+          <label>month</label>
+          <input data-name="month" placeholder="MM" type="number" min="0" max="12">
+          <div class="error">
+            <div class="error-invalid">Must be a valid month</div>
+            <div class="error-empty">This field is required</div>
+          </div>
+        </div>
+        <div class="input" id="year">
+          <label>year</label>
+          <input data-name="year" placeholder="YYYY" type="number" min="0" max="2023">
+          <div class="error">
+            <div class="error-invalid">Must be in the past</div>
+            <div class="error-empty">This field is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="bar-container">
+        <hr class="bar"/>
+        <div class="bar-circle">
+          <img src="./assets/images/icon-arrow.svg" alt="down arrow">
+        </div>
+      </div>
+      <div class="result">
+        <div>
+          <span class="result-year">--</span> years
+        </div>
+        <div>
+          <span class="result-month">--</span> months
+        </div>
+        <div>
+          <span class="result-day">--</span> days
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a target="_blank" href="https://wwww.github.com/Ali-Akbar-Qasimi">Ali Akbar Qasimi</a>.
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

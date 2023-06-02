@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+.container .content {
+  padding: 50px 30px;
+  width: 100%;
+  background-color: white;
+  border-radius: 20px 20px 100px 20px;
+}
+
+.container .content .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.container .content .inputs .input {
+  width: 100%;
+  gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .content .inputs .input input::-webkit-outer-spin-button,
+.container .content .inputs .input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container .content .inputs .input input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.container .content .inputs .input label {
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #716f6f;
+}
+
+.container .content .inputs .input input {
+  width: 100%;
+  padding: 20px 20px;
+  border-radius: 10px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: 1px solid #dbdbdb;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.container .content .inputs .input .error {
+  color: #ff5757;
+  font-size: 10px;
+}
+
+.container .content .inputs .input .error div {
+  display: none;
+}
+
+.container .content .inputs .input.empty label {
+  color: #ff5757;
+}
+
+.container .content .inputs .input.empty input {
+  border: 1px solid red;
+}
+
+.container .content .inputs .input.empty .error .error-invalid {
+  display: none;
+}
+
+.container .content .inputs .input.empty .error .error-empty {
+  display: block;
+}
+
+.container .content .inputs .input.invalid label {
+  color: #ff5757;
+}
+
+.container .content .inputs .input.invalid input {
+  border: 1px solid red;
+}
+
+.container .content .inputs .input.invalid .error .error-empty {
+  display: none;
+}
+
+.container .content .inputs .input.invalid .error .error-invalid {
+  display: block;
+}
+
+.container .content .bar-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding-block: 60px;
+}
+
+.container .content .bar-container .bar {
+  width: 100%;
+  background-color: #716f6f;
+}
+
+.container .content .bar-container .bar-circle {
+  position: absolute;
+  background-color: #854dff;
+  width: 70px;
+  height: 70px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.container .content .bar-container .bar-circle img {
+  width: 40px;
+}
+
+.container .content .result {
+  font-size: 60px;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.container .content .result span {
+  color: #854dff;
+}
+
+@media only screen and (min-width: 600px) {
+  .container .content {
+    width: 60%;
+    padding: 30px;
+    padding-top: 30px;
+  }
+  .container .content .inputs {
+    width: 80%;
+  }
+  .container .content .inputs .input input:hover {
+    cursor: pointer;
+    border-color: #854dff;
+  }
+  .container .content .bar-container {
+    padding-block: 30px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .container .content .bar-container .bar-circle {
+    -webkit-transition: background-color 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out;
+  }
+  .container .content .bar-container .bar-circle:hover {
+    background-color: #141414;
+  }
+  .container .content .result {
+    font-size: 70px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=style.css.map */
